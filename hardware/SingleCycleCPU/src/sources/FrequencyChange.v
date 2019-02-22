@@ -20,7 +20,7 @@ module FrequencyChange (
     wire slow_clk;
     wire fast_clk;
 
-    Divider #(1)less_clock_divider(.clk(rawClk), .clk_N(fast_clk));
+    Divider #(10)less_clock_divider(.clk(rawClk), .clk_N(fast_clk));
 
     Divider #(1000000)clock_divider(.clk(rawClk), .clk_N(slow_clk));
 
